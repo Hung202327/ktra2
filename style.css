@@ -1,0 +1,764 @@
+
+/* =====================================
+   1. THIẾT LẬP CHUNG
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin: 5px 0;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 17px;
+}
+
+
+/* =====================================
+   2. HỆ THỐNG GRID-VIEW 12 CỘT
+   DESKTOP FIRST
+===================================== */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+/* =====================================
+   3. HEADER
+===================================== */
+
+.header {
+    width: 100%;
+    background-color: #063d70;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* =====================================
+   4. THANH MENU
+===================================== */
+
+.menu {
+    background-color: #333;
+    width: 100%;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    padding: 12px 15px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng phóng to menu */
+
+.menu li a:hover {
+    transform: scale(1.2);
+    text-decoration: none;
+}
+
+
+/* =====================================
+   5. BANNER
+===================================== */
+
+.banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner h2 {
+    position: absolute;
+    bottom: 25px;
+    left: 5px;
+    margin: 0;
+    font-size: 24px;
+}
+
+
+/* =====================================
+   6. NỘI DUNG CHÍNH
+===================================== */
+
+main {
+    width: 100%;
+}
+
+
+/* =====================================
+   7. THƯ NGỎ GỬI CÁC BẠN THÍ SINH
+===================================== */
+
+.thungo {
+    background-color: orange;
+    padding: 10px;
+}
+
+.thungo h2 {
+    margin: 15px 0;
+}
+
+.thungo img {
+    width: 100%;
+}
+
+.thungo [class*="col-"] {
+    padding: 5px;
+}
+
+.thungo p {
+    line-height: 1.3;
+}
+
+.thungo a {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+
+/* =====================================
+   8. TÔI MUỐN
+===================================== */
+
+.toimuon {
+    background-color: green;
+    min-height: 250px;
+    padding: 10px;
+}
+
+.toimuon h2 {
+    margin: 15px 0 25px;
+}
+
+.toimuon ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toimuon li {
+    margin: 4px 0;
+}
+
+.toimuon a:hover {
+    color: white;
+}
+
+
+/* =====================================
+   9. NHẬP HỌC
+===================================== */
+
+.nhaphoc {
+    background-color: #f1d234;
+    padding: 10px;
+}
+
+.nhaphoc h2 {
+    margin: 15px 0 30px;
+}
+
+.nhaphoc h4 {
+    margin: 20px 0 35px;
+}
+
+.nhaphoc p {
+    margin-bottom: 15px;
+}
+
+
+/* =====================================
+   10. SỰ KIỆN SẮP ĐẾN
+===================================== */
+
+.sukien {
+    background-color: lightgreen;
+    padding: 5px;
+}
+
+.sukien h3 {
+    margin: 10px 0 25px;
+}
+
+.sukien-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.ngay {
+    width: 40%;
+    flex-shrink: 0;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.ngay div {
+    padding: 4px 0;
+}
+
+.ngay div:first-child {
+    border-bottom: 1px solid white;
+}
+
+.sukien-item p {
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* =====================================
+   11. TIN TỨC HCEM
+===================================== */
+
+.tintuc {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.tintuc h3 {
+    margin: 5px 0 10px;
+}
+
+.tintuc [class*="col-"] {
+    padding: 8px;
+}
+
+
+/* Tin tức chính */
+
+.tinchinh img {
+    width: 100%;
+}
+
+.tinchinh p {
+    font-size: 14px;
+}
+
+
+/* Tin tức nhỏ */
+
+.tinphu {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.tinphu img {
+    width: 45%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.tinphu p {
+    flex: 1;
+    margin: 0;
+    font-size: 13px;
+}
+
+
+/* =====================================
+   12. TIỆN ÍCH BÊN PHẢI
+===================================== */
+
+.tienich {
+    width: 100%;
+}
+
+
+/* Khung tiện ích */
+
+.tienich a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    min-height: 55px;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+
+/* Ảnh biểu tượng */
+
+.tienich img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+/* Nội dung chữ */
+
+.tienich span {
+    flex: 1;
+    min-width: 0;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+
+/* Kế hoạch công việc */
+
+.kehoach {
+    background-color: #5c9e13;
+}
+
+
+/* Quản lý văn bản */
+
+.quanly {
+    background-color: #f43c16;
+}
+
+
+/* Đăng ký học online */
+
+.dangky {
+    background-color: #008b17;
+}
+
+
+/* Tải tài liệu học tập */
+
+.tailieu {
+    background-color: #2877e5;
+}
+
+
+/* Chữ màu đen */
+
+.tailieu span {
+    color: black;
+}
+
+
+/* Hiệu ứng phóng to giống thanh menu */
+
+.tienich a:hover {
+    transform: scale(1.2);
+    text-decoration: none;
+    z-index: 1;
+}
+
+
+/* =====================================
+   13. FOOTER
+===================================== */
+
+.footer {
+    width: 100%;
+    height: 130px;
+    background-color: #00bce9;
+}
+
+
+/* =====================================
+   14. RESPONSIVE MÁY TÍNH BẢNG
+   MAX-WIDTH: 768PX
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    .col-m-1 {
+        width: 8.33%;
+    }
+
+    .col-m-2 {
+        width: 16.66%;
+    }
+
+    .col-m-3 {
+        width: 25%;
+    }
+
+    .col-m-4 {
+        width: 33.33%;
+    }
+
+    .col-m-5 {
+        width: 41.66%;
+    }
+
+    .col-m-6 {
+        width: 50%;
+    }
+
+    .col-m-7 {
+        width: 58.33%;
+    }
+
+    .col-m-8 {
+        width: 66.66%;
+    }
+
+    .col-m-9 {
+        width: 75%;
+    }
+
+    .col-m-10 {
+        width: 83.33%;
+    }
+
+    .col-m-11 {
+        width: 91.66%;
+    }
+
+    .col-m-12 {
+        width: 100%;
+    }
+
+    [class*="col-"] {
+        padding: 10px;
+    }
+
+
+    /* Menu */
+
+    .menu li a {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+
+    /* Banner */
+
+    .banner h2 {
+        font-size: 20px;
+        bottom: 15px;
+    }
+
+
+    /* Thư ngỏ */
+
+    .thungo img {
+        max-width: 220px;
+    }
+
+
+    /* Tôi muốn và nhập học */
+
+    .toimuon,
+    .nhaphoc {
+        min-height: 220px;
+    }
+
+
+    /* Tin tức */
+
+    .tinphu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tinphu img,
+    .tinphu p {
+        width: 100%;
+    }
+
+
+    /* Tiện ích: 2 cột */
+
+    .tienich {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .tienich a {
+        margin-bottom: 0;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        height: 100px;
+    }
+
+}
+
+
+/* =====================================
+   15. RESPONSIVE ĐIỆN THOẠI VỪA
+   MAX-WIDTH: 600PX
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    [class*="col-"] {
+        width: 100%;
+        padding: 8px;
+    }
+
+
+    /* Menu */
+
+    .menu li a {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+
+    /* Banner */
+
+    .banner h2 {
+        font-size: 17px;
+        bottom: 10px;
+    }
+
+
+    /* Thư ngỏ */
+
+    .thungo img {
+        max-width: 200px;
+        margin: auto;
+    }
+
+    .thungo p {
+        font-size: 14px;
+    }
+
+
+    /* Tôi muốn và nhập học */
+
+    .toimuon,
+    .nhaphoc {
+        min-height: auto;
+        padding: 15px;
+    }
+
+
+    /* Sự kiện */
+
+    .sukien-item {
+        align-items: center;
+    }
+
+    .ngay {
+        width: 70px;
+    }
+
+
+    /* Tin tức */
+
+    .tinphu {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .tinphu img {
+        width: 40%;
+    }
+
+    .tinphu p {
+        flex: 1;
+    }
+
+
+    /* Tiện ích */
+
+    .tienich {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .tienich a {
+        padding: 10px;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .tienich img {
+        width: 28px;
+        height: 28px;
+    }
+
+}
+
+
+/* =====================================
+   16. RESPONSIVE ĐIỆN THOẠI NHỎ
+   MAX-WIDTH: 400PX
+===================================== */
+
+@media screen and (max-width: 400px) {
+
+    body {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+
+    /* Menu */
+
+    .menu li a {
+        padding: 10px 8px;
+        font-size: 11px;
+    }
+
+
+    /* Banner */
+
+    .banner h2 {
+        font-size: 14px;
+    }
+
+
+    /* Tiện ích: 1 cột */
+
+    .tienich {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .tienich a {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .tienich img {
+        width: 35px;
+        height: 35px;
+    }
+
+
+    /* Giảm mức phóng to trên điện thoại nhỏ */
+
+    .menu li a:hover,
+    .tienich a:hover {
+        transform: scale(1.1);
+    }
+
+
+    /* Footer */
+
+    .footer {
+        height: 70px;
+    }
+
+}
